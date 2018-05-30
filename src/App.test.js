@@ -1,10 +1,27 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
 import App from './App';
+import CommentForm from './components/CommentForm';
+import CommentList from './components/CommentList';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  expect(div.innerHTML).toContain('Hello!')
-  ReactDOM.unmountComponentAtNode(div);
+
+describe('App', () => {
+  let wrapped = null;
+  beforeEach(() => {
+    wrapped = shallow(<App />);
+  });
+
+  afterEach(() => {
+    // speed up our test suite by executing cleanup to
+    // get rid of the div we used to embed our element.
+  });
+
+  it('renders the comment box', () => {
+
+    expect(wrapped.find(CommentForm).length).toEqual(1);
+  });
+
+  it('renders the CommentList', () => {
+    expect(wrapped.find(CommentList).length).toEqual(1);
+  });
 });

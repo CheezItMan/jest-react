@@ -9,6 +9,7 @@ class CommentForm extends Component {
         <textarea>
 
         </textarea>
+        <input type="submit" value="Add Comment" />
       </form>
     );
   }

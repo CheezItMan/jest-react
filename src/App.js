@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import CommentForm from './components/CommentForm';
+import CommentList from './components/CommentList';
+
 
 class App extends Component {
   render() {
@@ -8,7 +10,7 @@ class App extends Component {
       <div className="App">
         Hello!
         <CommentForm />
-        <input type="submit" value="Add Comment" />
+        <CommentList />        
       </div>
     );
   }
