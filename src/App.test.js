@@ -11,10 +11,7 @@ describe('App', () => {
     wrapped = shallow(<App />);
   });
 
-  afterEach(() => {
-    // speed up our test suite by executing cleanup to
-    // get rid of the div we used to embed our element.
-  });
+
 
   it('renders the comment box', () => {
 
