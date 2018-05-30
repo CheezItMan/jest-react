@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
-import CommentForm from './components/CommentForm';
-import CommentList from './components/CommentList';
+import App from 'App';
+import CommentForm from 'components/CommentForm';
+import CommentList from 'components/CommentList';
 
 
 describe('App', () => {
